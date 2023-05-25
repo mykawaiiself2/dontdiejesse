@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] float CountToKill;
+    [SerializeField] public float CountToKill;
     public GameObject player;
     public GameObject cam2;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            CountToKill += 1;
-        }
         if(CountToKill >= 1)
         {
-            player.SetActive(false);
-            cam2.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                player.SetActive(false);
+                cam2.SetActive(true);
+            }
+            
         }
     }
 }
