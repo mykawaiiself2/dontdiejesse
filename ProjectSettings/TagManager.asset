@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - trigger
+  - Closet
+  - Bullet
+  - Gun
   layers:
   - Default
   - TransparentFX

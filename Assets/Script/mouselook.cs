@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class mouselook : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class mouselook : MonoBehaviour
     float xRotation = 0f;
 
     // varibles for interactions
-    public LayerMask layerMask;
+    public GameObject interactionUI;
+    public TMP_Text interactionUIText;
+    public float playerActivatedDistance; // the length of the interaction ray
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,17 +47,60 @@ public class mouselook : MonoBehaviour
 
     private void InteractWithObject()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, layerMask))
+        // make a cursor for the player so that they can see when they are looking at it.
+        RaycastHit hitInfo;
+        bool didItHit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, playerActivatedDistance);
+        if (didItHit)
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            //Debug.Log("Did Hit");
+            GameObject hitGameObject = hitInfo.collider.gameObject;
+            if (hitGameObject.CompareTag("Closet"))
+            {
+                interactionUI.SetActive(true);
+                interactionUIText.text = "Open Closet";
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitInfo.distance, Color.yellow);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitGameObject.GetComponent<ClosetInteraction>().OpenCloset();
+                    // code here for if you want to disable this after opening up the closet
+                }
+                //Debug.Log("Did Hit");
+                
+            }
+            else if (hitGameObject.CompareTag("Bullet"))
+            {
+                interactionUI.SetActive(true);
+                interactionUIText.text = "Pick Up Bullet";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitGameObject.GetComponent<Bullet_PickUp>().BulletToInv();
+                }
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitInfo.distance, Color.yellow);
+            }
+            else if (hitGameObject.CompareTag("Gun"))
+            {
+                interactionUI.SetActive(true);
+                interactionUIText.text = "Pick Up Gun";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hitGameObject.GetComponent<Gun_PickUp>().GunToInv();
+                }
+            }
+            else
+            {
+                if (interactionUI.activeSelf == true)
+                {
+                    interactionUI.SetActive(false);
+                }
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.black);
+                //Debug.Log("Did not Hit");
+            }
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.black);
-            //Debug.Log("Did not Hit");
+            if (interactionUI.activeSelf == true)
+            {
+                interactionUI.SetActive(false);
+            }
         }
-
     }
 }
