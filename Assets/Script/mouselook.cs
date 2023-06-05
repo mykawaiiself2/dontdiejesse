@@ -21,7 +21,7 @@ public class mouselook : MonoBehaviour
     void Start()
     {
         // locks the cursors in place
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -61,9 +61,9 @@ public class mouselook : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hitGameObject.GetComponent<ClosetInteraction>().OpenCloset();
-                    // code here for if you want to disable this after opening up the closet
+                    //code here for if you want to disable this after opening up the closet
                 }
-                //Debug.Log("Did Hit");
+                Debug.Log("Did Hit");
                 
             }
             else if (hitGameObject.CompareTag("Bullet"))
@@ -78,11 +78,11 @@ public class mouselook : MonoBehaviour
             }
             else if (hitGameObject.CompareTag("Gun"))
             {
-                interactionUI.SetActive(true);
-                interactionUIText.text = "Pick Up Gun";
+              interactionUI.SetActive(true);
+               interactionUIText.text = "Pick Up Gun";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hitGameObject.GetComponent<Gun_PickUp>().GunToInv();
+                   hitGameObject.GetComponent<Gun_PickUp>().GunToInv();
                 }
             }
             else
@@ -91,7 +91,7 @@ public class mouselook : MonoBehaviour
                 {
                     interactionUI.SetActive(false);
                 }
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.black);
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.black);
                 //Debug.Log("Did not Hit");
             }
         }
@@ -99,7 +99,7 @@ public class mouselook : MonoBehaviour
         {
             if (interactionUI.activeSelf == true)
             {
-                interactionUI.SetActive(false);
+              interactionUI.SetActive(false);
             }
         }
     }

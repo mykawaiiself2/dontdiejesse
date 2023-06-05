@@ -1,45 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Interactions : MonoBehaviour
 {
-   [SerializeField] private bool _FirstTrigger;
-   //[SerializeField] private bool _SecondTrigger;
-   public GameObject object1;
-    //public GameObject object2;
-
-    public Gun gun;
-   public float secondtrigger;
+    [SerializeField] private bool _FirstTrigger;
+    public Animator m_Animator;
+    [SerializeField] private float stagecountergun;
+    public GameObject Wapen;
+    public FinalKill finalKill;
+    public GameObject FControl;
     void Update()
     {
-        if (_FirstTrigger == true)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                trigger();
-            }
-        }
+        
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("trigger"))
+        if (other.CompareTag("Player"))
         {
-            _FirstTrigger = true;
+            FControl.SetActive(true);
+            if(stagecountergun == 0)
+            {
+                if (Input.GetKeyUp(KeyCode.F))
+                {
+                    m_Animator.SetTrigger("open");
+                    stagecountergun = 1f;
+                }
+            }
+            else if (stagecountergun == 1)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Wapen.SetActive(false);
+                    finalKill.CountToKill += 1;
+                }
+            }
+            
             
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("trigger"))
+        if (other.CompareTag("Player"))
         {
-            _FirstTrigger = false;
+            FControl.SetActive(false);
         }
     }
-    void trigger()
-    {
-        object1.SetActive(false);
-        _FirstTrigger = false;
-        gun.CountToKill += 1f;
-    }
+    
 }
