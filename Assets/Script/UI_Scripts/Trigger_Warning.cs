@@ -9,6 +9,11 @@ public class Trigger_Warning : MonoBehaviour
     [SerializeField] private float _maxTime = 5;
     [SerializeField] private bool _warningActive;
     [SerializeField] private bool _mouseIsMoving = false;
+    private bool a_bool = true;
+    private bool s_bool = true;
+    private bool w_bool = true;
+    private bool d_bool = true;
+    public GameObject Tutorail, w_visaul, a_visaul, s_visaul, d_visaul;
     public GameObject warningElement;
     public Button mybutton;
 
@@ -24,6 +29,7 @@ public class Trigger_Warning : MonoBehaviour
     void Update()
     {
         MouseCheck();
+        Tutorial();
     }
 
     private void FixedUpdate()
@@ -45,6 +51,8 @@ public class Trigger_Warning : MonoBehaviour
         _warningActive = false;
         warningElement.SetActive(false);
         Time.timeScale = 1;
+        // set tutorial stuff to true
+        ActiveVisaulButtonPrompt();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -79,5 +87,41 @@ public class Trigger_Warning : MonoBehaviour
         {
             _mouseIsMoving = false;
         }
+    }
+
+    private void Tutorial()
+    {
+        if (Input.GetKeyDown("a") && a_bool)
+        {
+            a_visaul.SetActive(false);
+            a_bool = false;
+        }
+        if(Input.GetKeyDown("d") && d_bool)
+        {
+            d_visaul.SetActive(false);
+            d_bool = false;
+        }
+        if (Input.GetKeyDown("s") && s_bool)
+        {
+            s_visaul.SetActive(false);
+            s_bool = false;
+        }
+        if (Input.GetKeyDown("w") && w_bool)
+        {
+            w_visaul.SetActive(false);
+            w_bool = false;
+        }
+    }
+
+    private void ActiveVisaulButtonPrompt()
+    {
+        a_bool = true;
+        a_visaul.SetActive(true);
+        d_bool = true;
+        d_visaul.SetActive(true);
+        s_bool = true;
+        s_visaul.SetActive(true);
+        w_bool = true;
+        w_visaul.SetActive(true);
     }
 }
