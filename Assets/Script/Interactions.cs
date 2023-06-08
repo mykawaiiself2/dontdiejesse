@@ -8,9 +8,8 @@ public class Interactions : MonoBehaviour
     [SerializeField] private bool _FirstTrigger;
     public Animator m_Animator;
     [SerializeField] private float stagecountergun;
-    public GameObject Wapen;
-    public FinalKill finalKill;
     public GameObject FControl;
+    public GameObject PickAbleObject;
     void Update()
     {
         
@@ -31,13 +30,10 @@ public class Interactions : MonoBehaviour
             else if (stagecountergun == 1)
             {
                 if (Input.GetKeyDown(KeyCode.F))
-                {
-                    Wapen.SetActive(false);
-                    finalKill.CountToKill += 1;
+                {              
+                    PickAbleObject.SetActive(false);
                 }
             }
-            
-            
         }
     }
     private void OnTriggerExit(Collider other)

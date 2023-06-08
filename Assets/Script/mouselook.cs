@@ -11,9 +11,9 @@ public class mouselook : MonoBehaviour
     float xRotation = 0f;
 
     // varibles for interactions
-    public GameObject interactionUI;
-    public TMP_Text interactionUIText;
-    public float playerActivatedDistance; // the length of the interaction ray
+    //public GameObject interactionUI;
+    //public TMP_Text interactionUIText;
+    //public float playerActivatedDistance; // the length of the interaction ray
     
 
 
@@ -21,7 +21,7 @@ public class mouselook : MonoBehaviour
     void Start()
     {
         // locks the cursors in place
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -48,58 +48,58 @@ public class mouselook : MonoBehaviour
     private void InteractWithObject()
     {
         // make a cursor for the player so that they can see when they are looking at it.
-        RaycastHit hitInfo;
-        bool didItHit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, playerActivatedDistance);
-        if (didItHit)
+        //RaycastHit hitInfo;
+        //bool didItHit = Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, playerActivatedDistance);
+        //if (didItHit)
         {
-            GameObject hitGameObject = hitInfo.collider.gameObject;
-            if (hitGameObject.CompareTag("Closet"))
+            //GameObject hitGameObject = hitInfo.collider.gameObject;
+            //if (hitGameObject.CompareTag("Closet"))
             {
-                interactionUI.SetActive(true);
-                interactionUIText.text = "Open Closet";
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitInfo.distance, Color.yellow);
-                if (Input.GetKeyDown(KeyCode.E))
+                //interactionUI.SetActive(true);
+                //interactionUIText.text = "Open Closet";
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitInfo.distance, Color.yellow);
+                //if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hitGameObject.GetComponent<ClosetInteraction>().OpenCloset();
+                    //hitGameObject.GetComponent<ClosetInteraction>().OpenCloset();
                     //code here for if you want to disable this after opening up the closet
                 }
-                Debug.Log("Did Hit");
+                //Debug.Log("Did Hit");
                 
             }
-            else if (hitGameObject.CompareTag("Bullet"))
+            //else if (hitGameObject.CompareTag("Bullet"))
             {
-                interactionUI.SetActive(true);
-                interactionUIText.text = "Pick Up Bullet";
-                if (Input.GetKeyDown(KeyCode.E))
+                //interactionUI.SetActive(true);
+                //interactionUIText.text = "Pick Up Bullet";
+                //if (Input.GetKeyDown(KeyCode.E))
                 {
-                    hitGameObject.GetComponent<Bullet_PickUp>().BulletToInv();
+                    //hitGameObject.GetComponent<Bullet_PickUp>().BulletToInv();
                 }
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitInfo.distance, Color.yellow);
+                //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hitInfo.distance, Color.yellow);
             }
-            else if (hitGameObject.CompareTag("Gun"))
+            //else if (hitGameObject.CompareTag("Gun"))
             {
-              interactionUI.SetActive(true);
-               interactionUIText.text = "Pick Up Gun";
-                if (Input.GetKeyDown(KeyCode.E))
+              //interactionUI.SetActive(true);
+               //interactionUIText.text = "Pick Up Gun";
+                //if (Input.GetKeyDown(KeyCode.E))
                 {
-                   hitGameObject.GetComponent<Gun_PickUp>().GunToInv();
+                   //hitGameObject.GetComponent<Gun_PickUp>().GunToInv();
                 }
             }
-            else
+            //else
             {
-                if (interactionUI.activeSelf == true)
+                //if (interactionUI.activeSelf == true)
                 {
-                    interactionUI.SetActive(false);
+                    //interactionUI.SetActive(false);
                 }
                 //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.black);
                 //Debug.Log("Did not Hit");
             }
         }
-        else
+        //else
         {
-            if (interactionUI.activeSelf == true)
+            //if (interactionUI.activeSelf == true)
             {
-              interactionUI.SetActive(false);
+              //interactionUI.SetActive(false);
             }
         }
     }
