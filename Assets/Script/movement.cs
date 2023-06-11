@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-
+    public Animator playerAnim;
     public CharacterController controller;
 
     public float speed = 12f;
@@ -43,6 +43,18 @@ public class movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+        playerAnim.SetFloat("speed", 0);
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            playerAnim.SetFloat("speed", 1);
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            playerAnim.SetFloat("speed", -1);
+
+        }
     }
     
 }

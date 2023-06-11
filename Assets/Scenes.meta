@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 667f5d518ebd6204c833ec116a11a082
+=======
+guid: 79a6c0e01226bf14b92a84034f049cc6
+>>>>>>> TriggerWarningScene
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
