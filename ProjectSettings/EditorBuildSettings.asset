@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Room.unity
     guid: 42cbaf6f9026f9645943e0085eb12d80
+  - enabled: 1
+    path: Assets/Scenes/Pistol_scene.unity
+    guid: 8ab7cbbdf7e42844d9bcc0c3e0a9a64a
+  - enabled: 1
+    path: Assets/Scenes/Toxication_scene.unity
+    guid: 4e0195d4edc70fb4c91a45e02a6aac33
+  - enabled: 1
+    path: Assets/Scenes/TreinStation_scene.unity
+    guid: 766e97d2515a6d9488e58cf9683b904b
   m_configObjects: {}
