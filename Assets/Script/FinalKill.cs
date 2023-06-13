@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalKill : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class FinalKill : MonoBehaviour
     public GameObject player2;
     public Animator m_Animator;
     public GameObject FControl;
+    public float AnimationTimer;
+    public bool kill;
+    
     void Update()
     {
 
@@ -26,7 +30,17 @@ public class FinalKill : MonoBehaviour
                     cam2.SetActive(true);
                     player2.SetActive(true);
                     FControl.SetActive(false);
+                    kill = true;
 
+                }
+            }
+            if(kill == true)
+            {
+                FControl.SetActive(false);
+                AnimationTimer += Time.deltaTime;
+                if(AnimationTimer > 5)
+                {
+                    SceneManager.LoadScene("Main_Room");
                 }
             }
             

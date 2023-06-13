@@ -11,6 +11,7 @@ public class Interactions : MonoBehaviour
     public GameObject FControl;
     public GameObject PickAbleObject;
     public bool HasGun;
+    public FinalKill kill;
     void Update()
     {
         
@@ -34,8 +35,10 @@ public class Interactions : MonoBehaviour
                 if (stagecountergun == 1)
                 {
                     if (Input.GetKeyDown(KeyCode.F))
-                    {              
+                    {
                         PickAbleObject.SetActive(false);
+                        FControl.SetActive(false);
+                        kill.CountToKill += 1; 
                     }
                 }
             }
