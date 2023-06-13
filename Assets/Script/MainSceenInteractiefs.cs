@@ -6,12 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class MainSceenInteractiefs : MonoBehaviour
 {
-     void Update()
+     public GameObject ContralButton;
+     private void OnTriggerStay(Collider other)
      {
-         if (Input.GetKeyDown(KeyCode.Q))
-         {
-             SceneManager.LoadScene("Main_Room"); 
-         }
-         
+          if (other.CompareTag("Player"))
+          {
+              ContralButton.SetActive(true);
+          }
+     }
+     private void OnTriggerExit(Collider other)
+     {
+          if (other.CompareTag("Player"))
+          { 
+               ContralButton.SetActive(false);
+          }
      }
 }
