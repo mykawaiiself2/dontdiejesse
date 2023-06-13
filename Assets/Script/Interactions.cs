@@ -10,6 +10,7 @@ public class Interactions : MonoBehaviour
     [SerializeField] private float stagecountergun;
     public GameObject FControl;
     public GameObject PickAbleObject;
+    public bool HasGun;
     void Update()
     {
         
@@ -27,13 +28,18 @@ public class Interactions : MonoBehaviour
                     stagecountergun = 1f;
                 }
             }
-            else if (stagecountergun == 1)
+
+            if (HasGun == true)
             {
-                if (Input.GetKeyDown(KeyCode.F))
-                {              
-                    PickAbleObject.SetActive(false);
+                if (stagecountergun == 1)
+                {
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {              
+                        PickAbleObject.SetActive(false);
+                    }
                 }
             }
+            
         }
     }
     private void OnTriggerExit(Collider other)
