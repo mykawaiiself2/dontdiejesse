@@ -14,6 +14,7 @@ public class FinalKill : MonoBehaviour
     public GameObject FControl;
     public float AnimationTimer;
     public bool kill;
+    public PostProccesScript postProcces;
     
     
     void Update()
@@ -32,7 +33,7 @@ public class FinalKill : MonoBehaviour
                     player2.SetActive(true);
                     FControl.SetActive(false);
                     kill = true;
-
+                    
                 }
             }
             if(kill == true)
