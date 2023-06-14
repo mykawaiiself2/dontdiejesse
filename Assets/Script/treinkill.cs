@@ -21,8 +21,7 @@ public class treinkill : MonoBehaviour
         }
         if (timer > 4)
         {
-            print("hello");
-            SceneManager.LoadScene("Main_Room");
+            SceneManager.LoadScene("TreinFinalKill");
         }
     }
 
