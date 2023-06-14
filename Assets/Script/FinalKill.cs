@@ -13,7 +13,7 @@ public class FinalKill : MonoBehaviour
     public Animator m_Animator;
     public GameObject FControl;
     public float AnimationTimer;
-    public bool kill;
+    public bool kill, PistolRoom, ToxicationRoom;
     public PostProccesScript postProcces;
     
     
@@ -42,7 +42,17 @@ public class FinalKill : MonoBehaviour
                 AnimationTimer += Time.deltaTime;
                 if(AnimationTimer > 5)
                 {
-                    SceneManager.LoadScene("finalScene");
+                    if (ToxicationRoom == true)
+                    {
+                        SceneManager.LoadScene("ToxicationFinalRoom");
+                    }
+
+                    if (PistolRoom == true)
+                    {
+                        SceneManager.LoadScene("PistonFinalKill");
+                    }
+
+                    
                 }
             }
             

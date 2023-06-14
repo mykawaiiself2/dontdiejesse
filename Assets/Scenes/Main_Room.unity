@@ -258,7 +258,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text2
+  m_text: 'This game contains topics of depression and suicide.
+
+    
+
+    We want
+    to express the feelings and thoughts that come with depression and how social
+    media can inflate those, especially in the youth.
+
+    Another topic that is
+    important to talk about is the suicide rates in young people, which the 2nd leading
+    cause of death in the world for those aged 15-24 years.
+
+    
+
+    These things
+    are closely related and cause feelings of unhappiness, or not being good enough.
+
+    
+
+    If
+    you experience issues with these feelings and or thoughts or know someone with
+    these issues, call your local suicide prevention number or talk to someone that
+    can help.
+
+    
+
+    Finally, please enjoy our game.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -285,8 +311,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 5.5
+  m_fontSizeBase: 5.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -578,6 +604,134 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 31.934296, y: 13.17579, z: 35.969124}
   m_Center: {x: 1.2697425, y: 8.2359295, z: -3.2780962}
+--- !u!1 &815838406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 815838408}
+  - component: {fileID: 815838407}
+  m_Layer: 0
+  m_Name: music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &815838407
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815838406}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e89c0aa5c1011724ea9399307da6e341, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &815838408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815838406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 90.43723, y: -30.458391, z: 22.38482}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &805061651
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -779,7 +933,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text4
+  m_text: "Ce jeu aborde des sujets tels que la d\xE9pression et le suicide.\r\n\r\nNous
+    souhaitons exprimer les sentiments et les pens\xE9es li\xE9s \xE0 la d\xE9pression,
+    ainsi que la mani\xE8re dont les r\xE9seaux sociaux peuvent amplifier ces sentiments,
+    notamment chez les jeunes. Un autre sujet important \xE0 aborder est le taux
+    de suicide \xE9lev\xE9 chez les jeunes, qui est la deuxi\xE8me cause de d\xE9c\xE8s
+    dans le monde pour les personnes \xE2g\xE9es de 15 \xE0 24 ans.\r\n\r\nCes sujets
+    sont \xE9troitement li\xE9s et peuvent engendrer des sentiments de malheur ou
+    de ne pas \xEAtre assez bon.\r\n\r\nSi vous rencontrez des probl\xE8mes li\xE9s
+    \xE0 ces sentiments ou \xE0 ces pens\xE9es, ou si vous connaissez quelqu'un qui
+    en souffre, appelez le num\xE9ro local de pr\xE9vention du suicide ou parlez
+    \xE0 quelqu'un qui peut vous aider.\r\n\r\nEnfin, profitez de notre jeu."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -806,8 +970,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 5.5
+  m_fontSizeBase: 5.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1231,7 +1395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1080050362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1272,7 +1436,33 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text1
+  m_text: 'Dit spel bevat onderwerpen zoals depressie en zelfmoord.
+
+    
+
+    We
+    willen de gevoelens en gedachten die gepaard gaan met depressie uitdrukken, evenals
+    hoe sociale media deze gevoelens kunnen versterken, vooral bij jongeren. Een
+    ander belangrijk onderwerp om over te praten is het hoge aantal zelfmoorden onder
+    jonge mensen, wat wereldwijd de op een na belangrijkste doodsoorzaak is voor
+    mensen tussen de 15 en 24 jaar oud.
+
+    
+
+    Deze onderwerpen zijn nauw met
+    elkaar verbonden en kunnen gevoelens van ongelukkig zijn of het gevoel niet goed
+    genoeg te zijn veroorzaken.
+
+    
+
+    Als je zelf worstelt met deze gevoelens
+    of gedachten, of als je iemand kent die hiermee worstelt, bel dan het lokale
+    nummer voor zelfmoordpreventie of praat met iemand die kan helpen.
+
+    
+
+    Tot
+    slot, geniet van ons spel.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1299,8 +1489,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 5.5
+  m_fontSizeBase: 5.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1434,7 +1624,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188302490}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1947,7 +2137,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample text3
+  m_text: "Dieses Spiel behandelt Themen wie Depression und Suizid.\r\n\r\nWir m\xF6chten
+    die Gef\xFChle und Gedanken, die mit Depressionen einhergehen, darstellen und
+    zeigen, wie soziale Medien diese verst\xE4rken k\xF6nnen, insbesondere bei jungen
+    Menschen. Ein weiteres wichtiges Thema ist die hohe Selbstmordrate bei jungen
+    Menschen, die weltweit die zweith\xE4ufigste Todesursache f\xFCr Menschen im
+    Alter von 15 bis 24 Jahren ist.\r\n\r\nDiese Themen stehen in enger Verbindung
+    zueinander und k\xF6nnen Gef\xFChle von Ungl\xFCcklichsein oder dem Gef\xFChl,
+    nicht gut genug zu sein, hervorrufen.\r\n\r\nWenn du selbst mit diesen Gef\xFChlen
+    oder Gedanken zu k\xE4mpfen hast oder jemanden kennst, der Hilfe braucht, wende
+    dich an die \xF6rtliche Telefonnummer f\xFCr Suizidpr\xE4vention oder sprich
+    mit jemandem, der helfen kann.\r\n\r\nGenie\xDFe unser Spiel."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1974,8 +2174,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 5.5
+  m_fontSizeBase: 5.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
