@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FinalKill : MonoBehaviour
 {
-    [SerializeField] public float CountToKill;
+    [SerializeField] public float CountToKill, countTOGet;
     public float timer;
     public GameObject player;
     public GameObject cam2;
@@ -15,10 +15,11 @@ public class FinalKill : MonoBehaviour
     public float AnimationTimer;
     public bool kill;
     
+    
     void Update()
     {
 
-        if(CountToKill >= 2)
+        if(CountToKill >= countTOGet)
         {
             FControl.SetActive(true);
             timer += Time.deltaTime;
@@ -40,7 +41,7 @@ public class FinalKill : MonoBehaviour
                 AnimationTimer += Time.deltaTime;
                 if(AnimationTimer > 5)
                 {
-                    SceneManager.LoadScene("Main_Room");
+                    SceneManager.LoadScene("finalScene");
                 }
             }
             

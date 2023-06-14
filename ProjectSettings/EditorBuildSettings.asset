@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TreinStation_scene.unity
     guid: 766e97d2515a6d9488e58cf9683b904b
+  - enabled: 1
+    path: Assets/Scenes/tuterial.unity
+    guid: d1865cb2fa1c52c448e7bef72b17ce67
+  - enabled: 1
+    path: Assets/Scenes/finalScene.unity
+    guid: 38b4b607757c44744a923d51ab172b20
   m_configObjects: {}

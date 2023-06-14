@@ -2268,7 +2268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7579887925816299777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.003, y: 0.523, z: 0.4}
+  m_LocalPosition: {x: 0.017, y: 0.87, z: 0.386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2348,9 +2348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 200
   playerBody: {fileID: 4233341481326995740}
-  interactionUI: {fileID: 0}
-  interactionUIText: {fileID: 0}
-  playerActivatedDistance: 0
 --- !u!1 &8214492841772618655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,7 +2522,7 @@ GameObject:
   - component: {fileID: 270884640092898109}
   m_Layer: 2
   m_Name: playercube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2547,7 +2544,7 @@ Transform:
   - {fileID: 5707623757713537766}
   - {fileID: 3397547065025168725}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6951547427175375655
 MeshFilter:

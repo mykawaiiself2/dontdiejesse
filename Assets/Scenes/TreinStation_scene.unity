@@ -3846,6 +3846,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4369832717018125709, guid: 4de551190928b5d478b1cc0efbb9b417, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369832717018125709, guid: 4de551190928b5d478b1cc0efbb9b417, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4369832717018125709, guid: 4de551190928b5d478b1cc0efbb9b417, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.386
+      objectReference: {fileID: 0}
     - target: {fileID: 9002550569276018748, guid: 4de551190928b5d478b1cc0efbb9b417, type: 3}
       propertyPath: m_Name
       value: playercube

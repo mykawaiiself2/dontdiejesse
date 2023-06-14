@@ -8,6 +8,8 @@ TagManager:
   - Closet
   - Bullet
   - Gun
+  - movementtrigger
+  - interactiefstrigger
   layers:
   - Default
   - TransparentFX

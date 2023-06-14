@@ -19,7 +19,11 @@ public class treinkill : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        
+        if (timer > 4)
+        {
+            print("hello");
+            SceneManager.LoadScene("Main_Room");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,10 +36,7 @@ public class treinkill : MonoBehaviour
             player1.SetActive(false);
             player2.SetActive(true);
             timerON = true;
-            if (timer > 4)
-            {
-                SceneManager.LoadScene("Main_Room");
-            }
+            
         }
     }
 }
