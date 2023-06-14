@@ -10,7 +10,7 @@ public class Interactions : MonoBehaviour
     [SerializeField] private float stagecountergun;
     public GameObject FControl;
     public GameObject PickAbleObject;
-    public bool HasGun;
+    public bool HasGun, CountUp;
     public FinalKill kill;
     void Update()
     {
@@ -38,7 +38,12 @@ public class Interactions : MonoBehaviour
                     {
                         PickAbleObject.SetActive(false);
                         FControl.SetActive(false);
-                        kill.CountToKill += 1; 
+                        if (CountUp == true)
+                        {
+                            kill.CountToKill += 1;
+                            CountUp = false;
+                        }
+                        
                     }
                 }
             }

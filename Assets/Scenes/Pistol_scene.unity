@@ -284,6 +284,7 @@ MonoBehaviour:
   FControl: {fileID: 1859528316}
   PickAbleObject: {fileID: 1037165303}
   HasGun: 0
+  CountUp: 0
   kill: {fileID: 2018464446}
 --- !u!65 &101473130
 BoxCollider:
@@ -731,6 +732,7 @@ MonoBehaviour:
   FControl: {fileID: 1859528316}
   PickAbleObject: {fileID: 1037165303}
   HasGun: 0
+  CountUp: 0
   kill: {fileID: 2018464446}
 --- !u!65 &280526558
 BoxCollider:
@@ -867,6 +869,79 @@ Transform:
   m_Father: {fileID: 993107063}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &286716525
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 410776105}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0019999996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0019999992
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0020000003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0002900016
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0014000003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00095000723
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+      propertyPath: m_Name
+      value: gun resize
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
 --- !u!1 &315747179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1127,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.030742414, y: 0.017904008, z: 0.0113178175}
   m_Center: {x: 9.313226e-10, y: -0.000000007450581, z: -0.0055426406}
+--- !u!4 &410776105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8924996576757425164, guid: 55c00bfd1faf7254690fc3f105a492e0, type: 3}
+  m_PrefabInstance: {fileID: 1774528544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468621069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 620340879630152854, guid: 5b6685c057f063947b3f2c1be7420537, type: 3}
@@ -2339,6 +2419,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010871887, y: 0.0061350376, z: 0.0043041}
   m_Center: {x: 0.0000000020954758, y: 0.00033818083, z: 0.00020472014}
+--- !u!4 &861975067 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0809e6f0f7dbb6948aade12ca7b27cd6, type: 3}
+  m_PrefabInstance: {fileID: 286716525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &862899193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1599826595754709761, guid: b441321ed555f254d91c489113e3b969, type: 3}
@@ -5192,11 +5277,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 55c00bfd1faf7254690fc3f105a492e0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8924996576757425164, guid: 55c00bfd1faf7254690fc3f105a492e0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 861975067}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55c00bfd1faf7254690fc3f105a492e0, type: 3}
       insertIndex: -1
@@ -5475,6 +5563,7 @@ MonoBehaviour:
   FControl: {fileID: 1859528316}
   PickAbleObject: {fileID: 1229492431}
   HasGun: 1
+  CountUp: 1
   kill: {fileID: 2018464446}
 --- !u!1 &1852866252
 GameObject:
@@ -7219,6 +7308,10 @@ PrefabInstance:
       propertyPath: kill
       value: 
       objectReference: {fileID: 2018464446}
+    - target: {fileID: 109754734287895289, guid: 2bf8b3dd71e7541409187d6d4ea4bf2c, type: 3}
+      propertyPath: CountUp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 109754734287895289, guid: 2bf8b3dd71e7541409187d6d4ea4bf2c, type: 3}
       propertyPath: FControl
       value: 
