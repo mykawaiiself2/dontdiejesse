@@ -10,9 +10,18 @@ public class MainSceenInteractiefs : MonoBehaviour
      public GameObject ContralButton;
      public GameObject text1, text2, text3, text4;
     public float count;
+    private bool inRange;
 
      void Update()
     {
+        if (inRange)
+        {
+            if (Input.GetKeyUp(KeyCode.F))
+            {
+                count += 1f;
+            }
+            ContralButton.SetActive(true);
+        }
 
          if (count == 1)
          {
@@ -44,22 +53,20 @@ public class MainSceenInteractiefs : MonoBehaviour
          
     }
 
-    private void OnTriggerStay(Collider other)
-     {
-          if (other.CompareTag("Player"))
-          {
-               if (Input.GetKeyUp(KeyCode.F))
-               {
-                    count += 1f;
-               }
-              ContralButton.SetActive(true);
-          }
-     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }
+
      private void OnTriggerExit(Collider other)
      {
           if (other.CompareTag("Player"))
           { 
                ContralButton.SetActive(false);
-          }
+               inRange = false;
+        }
      }
 }

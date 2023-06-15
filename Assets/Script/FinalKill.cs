@@ -12,6 +12,7 @@ public class FinalKill : MonoBehaviour
     public GameObject player2;
     public Animator m_Animator;
     public GameObject FControl;
+    public GameObject triggerWarning;
     public float AnimationTimer;
     public bool kill, PistolRoom, ToxicationRoom;
     public PostProccesScript postProcces;
@@ -27,6 +28,7 @@ public class FinalKill : MonoBehaviour
             if (timer >= 1) {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    triggerWarning.SetActive(false);
                     m_Animator.SetTrigger("shoot");
                     player.SetActive(false);
                     cam2.SetActive(true);
@@ -34,13 +36,14 @@ public class FinalKill : MonoBehaviour
                     FControl.SetActive(false);
                     kill = true;
                     
+                    
                 }
             }
             if(kill == true)
             {
                 FControl.SetActive(false);
                 AnimationTimer += Time.deltaTime;
-                if(AnimationTimer > 5)
+                if(AnimationTimer > 8)
                 {
                     if (ToxicationRoom == true)
                     {
