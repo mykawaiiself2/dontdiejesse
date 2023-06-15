@@ -6839,6 +6839,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8477015097951932106}
     - target: {fileID: 2774721208588541153, guid: abc7ecb0bf891f24fb6bb4c3ba2a5a11, type: 3}
+      propertyPath: PistolRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774721208588541153, guid: abc7ecb0bf891f24fb6bb4c3ba2a5a11, type: 3}
       propertyPath: countTOGet
       value: 2
       objectReference: {fileID: 0}

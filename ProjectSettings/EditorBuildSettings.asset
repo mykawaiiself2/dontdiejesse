@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/startscreen.unity
+    guid: b001a64e8255cd844a7e84e36dd76946
+  - enabled: 1
+    path: Assets/Scenes/tuterial.unity
+    guid: d1865cb2fa1c52c448e7bef72b17ce67
+  - enabled: 1
     path: Assets/Scenes/Main_Room.unity
     guid: 42cbaf6f9026f9645943e0085eb12d80
   - enabled: 1
@@ -18,9 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TreinStation_scene.unity
     guid: 766e97d2515a6d9488e58cf9683b904b
   - enabled: 1
-    path: Assets/Scenes/tuterial.unity
-    guid: d1865cb2fa1c52c448e7bef72b17ce67
-  - enabled: 1
     path: Assets/Scenes/PistonFinalKill.unity
     guid: 38b4b607757c44744a923d51ab172b20
+  - enabled: 1
+    path: Assets/Scenes/TreinFinalKill.unity
+    guid: 4e01669461da1bb4e8eb86eda29836bc
+  - enabled: 1
+    path: Assets/Scenes/ToxicationFinalRoom.unity
+    guid: 3f4a1566f537e84418ef6422eeeb5137
   m_configObjects: {}
