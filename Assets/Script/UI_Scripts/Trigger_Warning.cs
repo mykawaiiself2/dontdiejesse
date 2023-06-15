@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Trigger_Warning : MonoBehaviour
 {
     [SerializeField] private float _timer;
-    [SerializeField] private float _maxTime = 5;
+    [SerializeField] private float _maxTime = 15;
     [SerializeField] private bool _warningActive;
     [SerializeField] private bool _mouseIsMoving = false;
     public GameObject warningElement;
