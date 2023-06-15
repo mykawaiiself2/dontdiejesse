@@ -8,20 +8,17 @@ public class pillpickup : MonoBehaviour
     public GameObject FControl;
     public GameObject PickAbleObject;
     public FinalKill kill;
+    public bool inRange;
     void Update()
     {
-        
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (inRange)
         {
             if (buttonActive == true)
             {
                 FControl.SetActive(true);
             }
-            
-            if (Input.GetKeyDown(KeyCode.F)) 
+
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 PickAbleObject.SetActive(false);
                 buttonActive = false;
@@ -29,14 +26,21 @@ public class pillpickup : MonoBehaviour
             }
         }
     }
-            
-        
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }        
     
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             FControl.SetActive(false);
+            inRange = false;
         }
     }
 }    

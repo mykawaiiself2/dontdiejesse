@@ -10,27 +10,20 @@ public class Interactions : MonoBehaviour
     [SerializeField] private float stagecountergun;
     public GameObject FControl;
     public GameObject PickAbleObject;
-    public bool HasGun, CountUp, buttonActive;
+    public bool HasGun, CountUp, buttonActive, inRange;
     public FinalKill kill;
     void Update()
     {
-        
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (inRange)
         {
-            if (buttonActive == true)
-            {
-                FControl.SetActive(true);
-            }
-            
-            if(stagecountergun == 0)
+            FControl.SetActive(true);
+            if (stagecountergun == 0)
             {
                 if (Input.GetKeyUp(KeyCode.F))
                 {
                     m_Animator.SetTrigger("open");
                     stagecountergun = 1f;
+
                 }
             }
 
@@ -47,18 +40,27 @@ public class Interactions : MonoBehaviour
                             kill.CountToKill += 1;
                             CountUp = false;
                         }
-                        
+
                     }
                 }
             }
-            
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             FControl.SetActive(false);
+            inRange = false;
         }
     }
     
