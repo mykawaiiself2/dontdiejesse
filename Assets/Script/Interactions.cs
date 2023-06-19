@@ -9,7 +9,7 @@ public class Interactions : MonoBehaviour
     public Animator m_Animator;
     [SerializeField] private float stagecountergun;
     public GameObject FControl;
-    public GameObject PickAbleObject;
+    public GameObject PickAbleObject, Fade;
     public bool HasGun, CountUp, buttonActive, inRange;
     public FinalKill kill;
     void Update()
@@ -39,6 +39,7 @@ public class Interactions : MonoBehaviour
                         {
                             kill.CountToKill += 1;
                             CountUp = false;
+                            Fade.SetActive(true);
                         }
 
                     }
