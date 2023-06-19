@@ -44,6 +44,14 @@ public class Interactions : MonoBehaviour
                     }
                 }
             }
+
+            if (buttonActive == false)
+            {
+                FControl.SetActive(false);
+            }
+            {
+                
+            }
         }
     }
 
