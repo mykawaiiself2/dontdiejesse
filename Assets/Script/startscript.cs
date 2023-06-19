@@ -7,6 +7,6 @@ public class startscript : MonoBehaviour
 {
     public void startgame()
     {
-        SceneManager.LoadScene("tuterial");
+        SceneManager.LoadScene("Main_Room");
     }
 }

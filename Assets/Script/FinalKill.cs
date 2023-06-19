@@ -16,6 +16,9 @@ public class FinalKill : MonoBehaviour
     public float AnimationTimer;
     public bool kill, PistolRoom, ToxicationRoom;
     public PostProccesScript postProcces;
+    public CanvasGroup myUIgroep;
+    public bool fadeOut;
+    public float TimerScene;
     
     
     void Update()
@@ -43,7 +46,7 @@ public class FinalKill : MonoBehaviour
             {
                 FControl.SetActive(false);
                 AnimationTimer += Time.deltaTime;
-                if(AnimationTimer > 8)
+                if(AnimationTimer > 10)
                 {
                     if (ToxicationRoom == true)
                     {
@@ -52,7 +55,17 @@ public class FinalKill : MonoBehaviour
 
                     if (PistolRoom == true)
                     {
-                        SceneManager.LoadScene("PistonFinalKill");
+                        if (fadeOut == true)
+                        {
+                            TimerScene += Time.deltaTime;
+                            myUIgroep.alpha += Time.deltaTime;
+                            if (TimerScene > 3)
+                            {
+                                SceneManager.LoadScene("PistonFinalKill");
+                            }
+                            
+                        }
+                        
                     }
 
                     
