@@ -37,6 +37,7 @@ public class Trigger_Warning : MonoBehaviour
     {
         MouseCheck();
         Tutorial();
+        
     }
 
     private void FixedUpdate()

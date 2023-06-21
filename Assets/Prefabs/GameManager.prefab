@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6849668162122660859}
   - component: {fileID: 2774721208588541153}
-  - component: {fileID: 5340980882470455338}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2774721208588541153
 MonoBehaviour:
@@ -46,36 +45,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CountToKill: 0
+  countTOGet: 0
   timer: 0
   player: {fileID: 0}
   cam2: {fileID: 0}
   player2: {fileID: 0}
   m_Animator: {fileID: 0}
   FControl: {fileID: 0}
+  triggerWarning: {fileID: 0}
   AnimationTimer: 0
   kill: 0
---- !u!114 &5340980882470455338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8420786315525976419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b33cd8a9b29e26459115a3cfa18c145, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kruis: {fileID: 0}
-  KruisUITMPText1: {fileID: 0}
-  KruisUITMPText2: {fileID: 0}
-  KruisUITMPText3: {fileID: 0}
-  number1: 4
-  number2: 2
-  number3: 6
-  finalnumber1: 0
-  finalnumber2: 0
-  finalnumber3: 0
-  correct1: 0
-  correct2: 0
-  correct3: 0
+  PistolRoom: 0
+  ToxicationRoom: 0
+  postProcces: {fileID: 0}
+  myUIgroep: {fileID: 0}
+  fadeOut: 0
+  TimerScene: 0

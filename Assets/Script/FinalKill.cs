@@ -17,6 +17,7 @@ public class FinalKill : MonoBehaviour
     public bool kill, PistolRoom, ToxicationRoom;
     public PostProccesScript postProcces;
     public CanvasGroup myUIgroep;
+    public GameObject fadepanel;
     public bool fadeOut;
     public float TimerScene;
     
@@ -29,7 +30,7 @@ public class FinalKill : MonoBehaviour
             FControl.SetActive(true);
             timer += Time.deltaTime;
             if (timer >= 1) {
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     triggerWarning.SetActive(false);
                     m_Animator.SetTrigger("shoot");
@@ -57,6 +58,7 @@ public class FinalKill : MonoBehaviour
                     {
                         if (fadeOut == true)
                         {
+                            fadepanel.SetActive(true);
                             TimerScene += Time.deltaTime;
                             myUIgroep.alpha += Time.deltaTime;
                             if (TimerScene > 3)
