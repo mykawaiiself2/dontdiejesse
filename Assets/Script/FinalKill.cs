@@ -47,7 +47,7 @@ public class FinalKill : MonoBehaviour
             {
                 FControl.SetActive(false);
                 AnimationTimer += Time.deltaTime;
-                if(AnimationTimer > 10)
+                if(AnimationTimer > 0)
                 {
                     if (ToxicationRoom == true)
                     {

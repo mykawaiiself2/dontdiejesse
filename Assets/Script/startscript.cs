@@ -7,6 +7,6 @@ public class startscript : MonoBehaviour
 {
     public void startgame()
     {
-        SceneManager.LoadScene("Main_Room");
+        SceneManager.LoadScene("Pistol_scene");
     }
 }

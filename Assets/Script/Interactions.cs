@@ -7,13 +7,15 @@ public class Interactions : MonoBehaviour
 {
     [SerializeField] private bool _FirstTrigger;
     public Animator m_Animator;
-    [SerializeField] private float stagecountergun;
+    [SerializeField] private float stagecountergun, gunpickuptimer;
     public GameObject FControl;
     public GameObject PickAbleObject, Fade;
     public bool HasGun, CountUp, buttonActive, inRange;
     public FinalKill kill;
+    public AudioSource OpeningLocked;
     void Update()
     {
+        gunpickuptimer += Time.deltaTime;
         if (inRange)
         {
             FControl.SetActive(true);
@@ -23,7 +25,8 @@ public class Interactions : MonoBehaviour
                 {
                     m_Animator.SetTrigger("open");
                     stagecountergun = 1f;
-
+                    gunpickuptimer = 0f;
+                    OpeningLocked.Play();
                 }
             }
 
@@ -31,18 +34,23 @@ public class Interactions : MonoBehaviour
             {
                 if (stagecountergun == 1)
                 {
-                    if (Input.GetKeyDown(KeyCode.F))
+                    if(gunpickuptimer >= 2)
                     {
-                        PickAbleObject.SetActive(false);
-                        buttonActive = false;
-                        if (CountUp == true)
+                        if (Input.GetKeyDown(KeyCode.F))
                         {
-                            kill.CountToKill += 1;
-                            CountUp = false;
-                            Fade.SetActive(true);
-                        }
+                            OpeningLocked.Play();
+                            PickAbleObject.SetActive(false);
+                            buttonActive = false;
+                            if (CountUp == true)
+                            {
+                                kill.CountToKill += 1;
+                                CountUp = false;
+                                Fade.SetActive(true);
+                            }
 
+                        }
                     }
+                    
                 }
             }
 

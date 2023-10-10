@@ -13,7 +13,7 @@ public class movement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
+    public AudioSource WalkingSound;
 
 
     Vector3 velocity;
@@ -45,16 +45,25 @@ public class movement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
         playerAnim.SetFloat("speed", 0);
 
-        if (Input.GetKey(KeyCode.W))
-        {
+        if (Input.GetKeyDown(KeyCode.W))
+        { 
             playerAnim.SetFloat("speed", 1);
-
+            WalkingSound.Play();
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             playerAnim.SetFloat("speed", -1);
-
+            WalkingSound.Play();
         }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            WalkingSound.Stop();
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            WalkingSound.Stop();
+        }
+
     }
     
 }
